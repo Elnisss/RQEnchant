@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         TitleCaps="False"
-        Title="RQEnchant" Height="677.839" Width="657.596">
+        Title="RQEnchant" Height="677.839" Width="649.596">
 
     <Grid Margin="-1,0,1,0" RenderTransformOrigin="0.499,0.505">
 
@@ -147,8 +147,8 @@
                 <Label Content="Тип" RenderTransformOrigin="0.878,0.461" HorizontalAlignment="Left" Width="32" Margin="1,6,0,3" Grid.Row="2"/>
                 <Label Content="Гр" RenderTransformOrigin="0.878,0.461" HorizontalAlignment="Left" Width="32" Margin="1,6,0,1" Grid.Row="1"/>
                 <Label Content="Экипировка:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" FontWeight="Bold" Height="26" Grid.ColumnSpan="2" Margin="29,1,0,0"/>
-                <ComboBox  SelectedItem="{Binding Grade}" ItemsSource="{Binding EquipGradeVariants}" HorizontalAlignment="Left" Width="101" Grid.Row="1" Margin="4,6,0,9" Grid.Column="1" SelectionChanged="ItemGradeChanged" DropDownOpened="ComboBox_DropDownOpened"/>
-                <ComboBox  SelectedItem="{Binding ItemType}" ItemsSource="{Binding EquipTypeVariants}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="101" Height="26" Grid.Row="2" Margin="4,6,0,0" Grid.Column="1" SelectionChanged="ItemTypeChanged" DropDownOpened="ComboBox_DropDownOpened"/>
+                <ComboBox  SelectedItem="{Binding Grade}" ItemsSource="{Binding EquipGradeVariants}" Focusable="False" HorizontalAlignment="Left" Width="101" Grid.Row="1" Margin="4,6,0,9" Grid.Column="1" SelectionChanged="ItemGradeChanged" DropDownOpened="ComboBox_DropDownOpened"/>
+                <ComboBox  SelectedItem="{Binding ItemType}" ItemsSource="{Binding EquipTypeVariants}" Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Top" Width="101" Height="26" Grid.Row="2" Margin="4,6,0,0" Grid.Column="1" SelectionChanged="ItemTypeChanged" DropDownOpened="ComboBox_DropDownOpened"/>
             </Grid>
             <Grid x:Name="CurrentEcnhLvls" DataContext="{Binding}" HorizontalAlignment="Left" Height="104" Margin="146,1,0,0" VerticalAlignment="Top" Width="148">
                 <Grid.ColumnDefinitions>
@@ -229,7 +229,7 @@
             <Label Content="Шанс заточисть все с 1й попытки:" HorizontalAlignment="Left" Margin="10,4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="197" Height="26" RenderTransformOrigin="0.861,0.462"/>
             <Label Content="%" HorizontalAlignment="Left" Margin="303,4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="24" Height="26" RenderTransformOrigin="0.861,0.462"/>
         </Grid>
-        <Label Content="Ис" HorizontalAlignment="Left" Margin="620,612,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ис" HorizontalAlignment="Left" Margin="613,617,0,0" VerticalAlignment="Top"/>
     </Grid>
 
 </controls:MetroWindow>
