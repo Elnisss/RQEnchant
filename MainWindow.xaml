@@ -1,0 +1,236 @@
+﻿<controls:MetroWindow x:Class="RQEnchant.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:rqEnchant="clr-namespace:RQEnchant"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        TitleCaps="False"
+        Title="RQEnchant" Height="677.839" Width="657.596">
+
+    <Grid Margin="-1,0,1,0" RenderTransformOrigin="0.499,0.505">
+
+        <Grid x:Name="EnchPropetyData" DataContext="{Binding}" HorizontalAlignment="Left" Height="381" Margin="2,10,0,0" VerticalAlignment="Top" Width="302" RenderTransformOrigin="0.843,0.524">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="51"/>
+                <ColumnDefinition Width="Auto" MinWidth="91"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto" MinWidth="60"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Lvl" HorizontalAlignment="Left" Margin="4,2,0,0" VerticalAlignment="Top" Height="25" Width="30" Grid.Row="1"/>
+            <Label Content="Камень" HorizontalAlignment="Left" Margin="19,2,0,0" VerticalAlignment="Top" Height="24" Width="52" Grid.Column="1" Grid.Row="1"/>
+            <Label Content="Цена" HorizontalAlignment="Left" Margin="14,2,0,0" VerticalAlignment="Top" Height="25" Width="40" Grid.Column="3" Grid.Row="1"/>
+            <Label Content="Руна" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="39" Grid.Column="4" Grid.Row="1" Margin="0,2,0,0"/>
+            <Label Content="Заточка" Grid.Column="1" HorizontalAlignment="Left" Margin="75,2,0,0" VerticalAlignment="Top" Height="28" Width="58" FontWeight="Bold" Grid.ColumnSpan="2"/>
+
+            <Label Content="0->1" Margin="4,4,0,0" RenderTransformOrigin="0.878,0.461" Grid.Row="2" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="46"/>
+            <Label Content="1->2" Margin="4,5,0,0" RenderTransformOrigin="1.056,0.538" Grid.Row="3" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="46"/>
+            <Label Content="2->3" HorizontalAlignment="Left" Margin="4,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.878,0.461" Height="26" Width="46" Grid.Row="4"/>
+            <Label Content="3->4" HorizontalAlignment="Left" Margin="4,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.878,0.461" Height="26" Width="46" Grid.Row="5"/>
+            <Label Content="4->5" HorizontalAlignment="Left" Margin="4,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.878,0.461" Height="26" Width="46" Grid.Row="6"/>
+            <Label Content="5->6" HorizontalAlignment="Left" Margin="4,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.878,0.461" Height="26" Width="46" Grid.Row="7"/>
+            <Label Content="6->7" HorizontalAlignment="Left" Margin="4,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.878,0.461" Height="26" Width="46" Grid.Row="8"/>
+            <Label Content="7->8" HorizontalAlignment="Left" Margin="4,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.878,0.461" Height="26" Width="47" Grid.Row="9"/>
+            <Label Content="8->9" HorizontalAlignment="Left" Margin="4,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.878,0.461" Height="26" Width="47" Grid.Row="10"/>
+            <Label Content="9->10" HorizontalAlignment="Left" Margin="4,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.878,0.461" Height="26" Width="47" Grid.Row="11"/>
+
+            <ComboBox Text="{Binding Plus1.StoneType}" Margin="4,5,0,0" Grid.Column="1" Grid.Row="2"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="87" Height="26"/>
+            <ComboBox Text="{Binding Plus2.StoneType}" Margin="4,5,0,0" Grid.Column="1" Grid.Row="3" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="87"/>
+            <ComboBox Text="{Binding Plus3.StoneType}" HorizontalAlignment="Left" Margin="4,5,0,0" VerticalAlignment="Top" Width="87" Height="26" Grid.Column="1" Grid.Row="4"/>
+            <ComboBox Text="{Binding Plus4.StoneType}" HorizontalAlignment="Left" Margin="4,5,0,0" VerticalAlignment="Top" Width="87" Height="26" Grid.Column="1" Grid.Row="5"/>
+            <ComboBox Text="{Binding Plus5.StoneType}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" Height="26" Grid.Column="1" Grid.Row="6" Margin="4,5,0,0"/>
+            <ComboBox Text="{Binding Plus6.StoneType}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" Height="26" Grid.Column="1" Grid.Row="7" Margin="4,5,0,0"/>
+            <ComboBox Text="{Binding Plus7.StoneType}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" Height="26" Grid.Column="1" Grid.Row="8" Margin="4,5,0,0"/>
+            <ComboBox Text="{Binding Plus8.StoneType}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" Height="26" Grid.Row="9" Margin="4,5,0,0" Grid.Column="1"/>
+            <ComboBox Text="{Binding Plus9.StoneType}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" Height="26" Grid.Row="10" Margin="4,5,0,0" Grid.Column="1"/>
+            <ComboBox Text="{Binding Plus10.StoneType}" VerticalAlignment="Top" Height="26" Grid.Row="11" Margin="4,5,0,0" Grid.Column="1"/>
+
+            <TextBox Text="{Binding Plus1.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Margin="4,5,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3"/>
+            <TextBox Text="{Binding Plus2.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Margin="4,5,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3"/>
+            <TextBox Text="{Binding Plus3.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Margin="4,5,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3"/>
+            <TextBox Text="{Binding Plus4.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Margin="4,5,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3"/>
+
+            <TextBox Text="{Binding Plus5.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3" Margin="4,5,0,0"/>
+            <TextBox Text="{Binding Plus6.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="7" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3" Margin="4,5,0,0"/>
+            <TextBox Text="{Binding Plus7.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="8" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3" Margin="4,5,0,0"/>
+            <TextBox Text="{Binding Plus8.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="9" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3" Margin="4,5,0,0"/>
+            <TextBox Text="{Binding Plus9.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3" Margin="4,5,0,0"/>
+            <TextBox Text="{Binding Plus10.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="11" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3" Margin="4,5,0,0"/>
+
+            <CheckBox IsChecked="{Binding Plus1.RuneIsUsed}" Grid.Column="4" HorizontalAlignment="Left" Margin="9,5,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.35,0.685" Width="22" Height="25"/>
+            <CheckBox IsChecked="{Binding Plus2.RuneIsUsed}" Grid.Column="4" HorizontalAlignment="Left" Margin="9,5,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.35,0.685" Width="22" Height="25"/>
+            <CheckBox IsChecked="{Binding Plus3.RuneIsUsed}" Grid.Column="4" HorizontalAlignment="Left" Margin="9,5,0,0" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="0.35,0.685" Width="22" Height="25"/>
+            <CheckBox IsChecked="{Binding Plus4.RuneIsUsed}" Grid.Column="4" HorizontalAlignment="Left" Margin="9,5,0,0" Grid.Row="5" VerticalAlignment="Top" RenderTransformOrigin="0.35,0.685" Width="22" Height="25"/>
+            <CheckBox IsChecked="{Binding Plus5.RuneIsUsed}" Grid.Column="4" HorizontalAlignment="Left" Margin="9,5,0,0" Grid.Row="6" VerticalAlignment="Top" RenderTransformOrigin="0.35,0.685" Width="22" Height="25"/>
+            <CheckBox IsChecked="{Binding Plus6.RuneIsUsed}" Grid.Column="4" HorizontalAlignment="Left" Margin="9,5,0,0" Grid.Row="7" VerticalAlignment="Top" RenderTransformOrigin="0.35,0.685" Width="22" Height="25"/>
+            <CheckBox IsChecked="{Binding Plus7.RuneIsUsed}" Grid.Column="4" HorizontalAlignment="Left" Margin="9,5,0,0" Grid.Row="8" VerticalAlignment="Top" RenderTransformOrigin="0.35,0.685" Width="22" Height="25"/>
+            <CheckBox IsChecked="{Binding Plus8.RuneIsUsed}" Grid.Column="4" HorizontalAlignment="Left" Margin="9,5,0,0" Grid.Row="9" VerticalAlignment="Top" RenderTransformOrigin="0.35,0.685" Width="22" Height="25"/>
+            <CheckBox IsChecked="{Binding Plus9.RuneIsUsed}" Grid.Column="4" HorizontalAlignment="Left" Margin="9,5,0,0" Grid.Row="10" VerticalAlignment="Top" RenderTransformOrigin="0.35,0.685" Width="22" Height="25"/>
+            <CheckBox IsChecked="{Binding Plus10.RuneIsUsed}" Grid.Column="4" HorizontalAlignment="Left" Margin="9,5,0,0" Grid.Row="11" VerticalAlignment="Top" RenderTransformOrigin="0.35,0.685" Width="22" Height="25"/>
+
+            <Label Content="Шанс" HorizontalAlignment="Left" Margin="6,2,0,0" VerticalAlignment="Top" Height="24" Width="44" Grid.Column="2" Grid.Row="1"/>
+            <Label Content="{Binding Plus1.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="2" VerticalAlignment="Top" Height="24" Width="46"/>
+            <Label Content="{Binding Plus2.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Width="46"/>
+            <Label Content="{Binding Plus3.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="4" VerticalAlignment="Top" Height="24" Width="46"/>
+            <Label Content="{Binding Plus4.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="5" VerticalAlignment="Top" Height="24" Width="46"/>
+            <Label Content="{Binding Plus5.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="6" VerticalAlignment="Top" Height="24" Width="46"/>
+            <Label Content="{Binding Plus6.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="7" VerticalAlignment="Top" Height="24" Width="46" RenderTransformOrigin="0.5,2.958"/>
+            <Label Content="{Binding Plus7.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="8" VerticalAlignment="Top" Height="24" Width="46"/>
+            <Label Content="{Binding Plus8.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="9" VerticalAlignment="Top" Height="24" Width="46"/>
+            <Label Content="{Binding Plus9.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="10" VerticalAlignment="Top" Height="24" Width="46"/>
+            <Label Content="{Binding Plus10.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="11" VerticalAlignment="Top" Height="24" Width="46"/>
+        </Grid>
+        <Button Content="Рассчитать" Margin="309,409,0,0" VerticalAlignment="Top" Click="RunCalculation_Click"
+                Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" OpacityMask="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderBrush="#FF614D4D" HorizontalAlignment="Left" Width="328" Height="118"/>
+        <Button Content="Сохранить шаблоны" Focusable="false" Margin="309,548,0,0" VerticalAlignment="Top" Click="SaveEnchProperties"
+            Background="#FF1A831F" Foreground="White" HorizontalAlignment="Left" Width="328"/>
+        <Button Content="Загрузить" Focusable="false" Margin="309,587,0,0" VerticalAlignment="Top" Click="LoadEnchProperties"
+            Background="#FF1A831F" Foreground="White" HorizontalAlignment="Left" Width="328"/>
+        <Grid HorizontalAlignment="Left" Height="216" Margin="0,396,0,0" VerticalAlignment="Top" Width="304">
+            <Grid x:Name="ResourcesCost" DataContext="{Binding}" HorizontalAlignment="Left" Height="223" Margin="3,1,0,0" VerticalAlignment="Top" Width="143">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" MinHeight="37"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Рыночные данные" Margin="10,1,0,0" VerticalAlignment="Top" Height="28" FontWeight="Bold" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="123"/>
+                <Label Content="Тип" Margin="15,0,0,0" Grid.Row="1" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="30"/>
+                <Label Content="Стоимость" Margin="1,0,0,0" Grid.Row="1" Height="26" VerticalAlignment="Top" Width="72" HorizontalAlignment="Left" Grid.Column="1"/>
+
+                <TextBox Text="{Binding AshkPrice}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Margin="4,5,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="1"/>
+                <TextBox Text="{Binding BlackStPrice}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="1" Margin="4,4,0,0"/>
+                <TextBox Text="{Binding WhiteStPrice, Mode=TwoWay}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="1" Margin="4,4,0,0"/>
+                <TextBox Text="{Binding RedStPrice}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="1" Margin="4,4,0,0"/>
+                <TextBox Text="{Binding RunePrice}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="1" Margin="4,4,0,0"/>
+
+                <Label Content="Ашкалот" HorizontalAlignment="Left" Margin="4,4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="60" Height="26"/>
+                <Label Content="Белый" HorizontalAlignment="Left" Margin="4,4,0,0" Grid.Row="4" VerticalAlignment="Top" Width="60" Height="26"/>
+                <Label Content="Черный" HorizontalAlignment="Left" Margin="4,4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="60" Height="26"/>
+                <Label Content="Красный" HorizontalAlignment="Left" Margin="4,4,0,0" Grid.Row="5" VerticalAlignment="Top" Width="60" Height="26"/>
+                <Label Content="Руна" HorizontalAlignment="Left" Margin="4,4,0,0" Grid.Row="6" VerticalAlignment="Top" Width="60" Height="26"/>
+            </Grid>
+            <Grid x:Name="EquipPropeties" DataContext="{Binding}" HorizontalAlignment="Left" Height="105" Margin="147,110,0,0" VerticalAlignment="Top" Width="148">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Тип" RenderTransformOrigin="0.878,0.461" HorizontalAlignment="Left" Width="32" Margin="1,6,0,3" Grid.Row="2"/>
+                <Label Content="Гр" RenderTransformOrigin="0.878,0.461" HorizontalAlignment="Left" Width="32" Margin="1,6,0,1" Grid.Row="1"/>
+                <Label Content="Экипировка:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" FontWeight="Bold" Height="26" Grid.ColumnSpan="2" Margin="29,1,0,0"/>
+                <ComboBox  SelectedItem="{Binding Grade}" ItemsSource="{Binding EquipGradeVariants}" HorizontalAlignment="Left" Width="101" Grid.Row="1" Margin="4,6,0,9" Grid.Column="1" SelectionChanged="ItemGradeChanged" DropDownOpened="ComboBox_DropDownOpened"/>
+                <ComboBox  SelectedItem="{Binding ItemType}" ItemsSource="{Binding EquipTypeVariants}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="101" Height="26" Grid.Row="2" Margin="4,6,0,0" Grid.Column="1" SelectionChanged="ItemTypeChanged" DropDownOpened="ComboBox_DropDownOpened"/>
+            </Grid>
+            <Grid x:Name="CurrentEcnhLvls" DataContext="{Binding}" HorizontalAlignment="Left" Height="104" Margin="146,1,0,0" VerticalAlignment="Top" Width="148">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Точим:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="55" FontWeight="Bold" Height="26" Margin="18,1,0,0" RenderTransformOrigin="1,0.462" Grid.Column="1"/>
+                <Label Content="С" RenderTransformOrigin="0.878,0.461" HorizontalAlignment="Left" Width="22" Margin="1,4,0,8" Grid.Row="1"/>
+                <Label Content="По" RenderTransformOrigin="0.878,0.461" HorizontalAlignment="Left" Width="31" Margin="1,4,0,6" Grid.Row="2"/>
+                <ComboBox SelectedItem="{Binding StartLvlText}" ItemsSource="{Binding StartEnchLvlVariants}" Grid.Column="1" HorizontalAlignment="Left" Margin="4,6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="102" Height="26"/>
+                <ComboBox SelectedItem="{Binding EndLvlText}" ItemsSource="{Binding EndEnchLvlVariants}" Grid.Column="1" HorizontalAlignment="Left" Margin="4,6,0,0" Grid.Row="2" VerticalAlignment="Top" Width="101" Height="26"/>
+            </Grid>
+        </Grid>
+        <Grid x:Name="CalculationResultData" DataContext="{Binding Mode=OneWay}" HorizontalAlignment="Left" Height="389" Margin="309,10,0,0" VerticalAlignment="Top" Width="328">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" MinHeight="290"/>
+                <RowDefinition Height="Auto" MinHeight="36"/>
+                <RowDefinition Height="94"/>
+            </Grid.RowDefinitions>
+            <Label Content="Результаты" Margin="131,0,121,0" VerticalAlignment="Top" Height="28" FontWeight="Bold"/>
+            <Grid HorizontalAlignment="Left" Height="289" Margin="10,1,0,0" VerticalAlignment="Top" Width="318" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" MinHeight="39"/>
+                    <RowDefinition Height="Auto" MinHeight="34"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" MinHeight="37"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto" MinWidth="86"/>
+                    <ColumnDefinition Width="Auto" MinWidth="167"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox Text="{Binding Ashkalot.TotalCount}" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Margin="6,6,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="1"/>
+                <TextBox Text="{Binding BlackStone.TotalCount}" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="1" Margin="6,6,0,0"/>
+                <TextBox Text="{Binding WhiteStone.TotalCount}" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="1" Margin="6,6,0,0"/>
+                <TextBox Text="{Binding RedStone.TotalCount}" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="1" Margin="6,6,0,0"/>
+                <TextBox Text="{Binding Rune.TotalCount}" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Grid.Row="7" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="1" Margin="6,6,0,0"/>
+
+                <TextBox Text="{Binding Ashkalot.TotalPrice, Converter={StaticResource StringConverter}, Mode=OneWay}" IsReadOnly="True"  HorizontalAlignment="Left" Height="26" Margin="6,6,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.Column="2"/>
+                <TextBox Text="{Binding BlackStone.TotalPrice, Converter={StaticResource StringConverter}, Mode=OneWay}" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.Column="2" Margin="6,6,0,0"/>
+                <TextBox Text="{Binding WhiteStone.TotalPrice, Converter={StaticResource StringConverter}, Mode=OneWay}" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.Column="2" Margin="6,6,0,0"/>
+                <TextBox Text="{Binding RedStone.TotalPrice, Converter={StaticResource StringConverter}, Mode=OneWay}" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.Column="2" Margin="6,6,0,0"/>
+                <TextBox Text="{Binding Rune.TotalPrice, Converter={StaticResource StringConverter}, Mode=OneWay}" IsReadOnly="True"  HorizontalAlignment="Left" Height="26" Grid.Row="7" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.Column="2" Margin="6,6,0,0"/>
+
+                <Label Content="Ашкалот" HorizontalAlignment="Left" Margin="4,6,0,0" Grid.Row="3" VerticalAlignment="Top" Width="60" Height="26"/>
+                <Label Content="Белый" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="5" VerticalAlignment="Top" Width="60" Height="26"/>
+                <Label Content="Черный" HorizontalAlignment="Left" Margin="4,0,0,1" Grid.Row="4" VerticalAlignment="Bottom" Width="60" Height="26"/>
+                <Label Content="Красный" HorizontalAlignment="Left" Margin="4,6,0,0" Grid.Row="6" VerticalAlignment="Top" Width="60" Height="26"/>
+                <Label Content="Руна" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="7" VerticalAlignment="Top" Width="60" Height="26"/>
+
+                <Label Content="Тип" Margin="19,0,0,0" Grid.Row="2" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="30"/>
+                <Label Content="Кол-во" Margin="14,0,0,1" Grid.Row="2" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="55" Grid.Column="1" RenderTransformOrigin="0.447,0.513"/>
+                <Label Content="Сумма" Margin="55,1,0,0" Grid.Row="2" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="46" Grid.Column="2"/>
+                <Label Content="Затраты на попытки:" HorizontalAlignment="Left" Margin="25,9,0,0" Grid.Row="8" VerticalAlignment="Top" Width="123" Height="26" RenderTransformOrigin="0.861,0.462" Grid.ColumnSpan="2"/>
+                <Label Content="Итого, с ценой попытки:" HorizontalAlignment="Left" Margin="3,9,0,0" Grid.Row="9" VerticalAlignment="Top" Width="145" Height="26" RenderTransformOrigin="0.861,0.462" Grid.ColumnSpan="2"/>
+                <TextBox Text="{Binding TotalEcnhItepationPrice, Converter={StaticResource StringConverter}, Mode=OneWay}" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Grid.Row="8" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.Column="2" Margin="6,9,0,0"/>
+                <TextBox Text="{Binding TotalEnchPrice, Converter={StaticResource StringConverter}, Mode=OneWay}" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Grid.Row="9" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.Column="2" Margin="6,9,0,0"/>
+            </Grid>
+            <Label Content="Среднее число итераций:" HorizontalAlignment="Left" Margin="54,4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="153" Height="26" RenderTransformOrigin="0.861,0.462"/>
+            <TextBox Text="{Binding FirstTryChance, Mode=OneWay}"  HorizontalAlignment="Left" Height="26" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" Margin="212,4,0,0"/>
+            <TextBox Text="{Binding TotalIterationCount, Mode=OneWay}"  HorizontalAlignment="Left" Height="26" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" Margin="212,4,0,0"/>
+            <Label Content="Шанс заточисть все с 1й попытки:" HorizontalAlignment="Left" Margin="10,4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="197" Height="26" RenderTransformOrigin="0.861,0.462"/>
+            <Label Content="%" HorizontalAlignment="Left" Margin="303,4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="24" Height="26" RenderTransformOrigin="0.861,0.462"/>
+        </Grid>
+        <Label Content="Ис" HorizontalAlignment="Left" Margin="620,612,0,0" VerticalAlignment="Top"/>
+    </Grid>
+
+</controls:MetroWindow>
+
