@@ -48,12 +48,12 @@ namespace RQEnchant.Core
             double secondIterationStBonus = 0;
             double iterationStMultipler = 1;
 
-            for (var i = endLvl - 1; i >= startLvl; i--)
+            for (var i = endLvl - 1; i >= 0; i--)
             {
                 var enchLvl = _enchProperyData.EnchLvls[i];
-                var lastChance = enchLvl.Chance;
+                var iterationChance = enchLvl.Chance;
 
-                var iterationStCount = (100 / lastChance) * iterationStMultipler - iterationStBonus;
+                var iterationStCount = (100 / iterationChance) * iterationStMultipler - iterationStBonus;
 
                 TotalEcnhItepationPrice += iterationStCount * enchLvl.EcnhPiece;
 
@@ -86,6 +86,12 @@ namespace RQEnchant.Core
                 if (enchLvl.RuneIsUsed)
                 {
                     Rune.TotalCount += iterationStCount;
+
+                    if (startLvl >= i)
+                    {
+                        break;
+                    }
+
                     secondIterationStBonus = 0;
                     iterationStMultipler = 1;
                 }
@@ -93,8 +99,14 @@ namespace RQEnchant.Core
                 {
                     secondIterationStBonus = iterationStCount - 1 * iterationStMultipler;
                     iterationStMultipler = iterationStCount;
+
+                    if (startLvl == i)
+                    {
+                        iterationStMultipler--;
+                    }
                 }
             }
+
             var chances = _enchProperyData.EnchLvls.Select(ench => ench.Chance).ToList();
             for (var i = startLvl; i < endLvl; i++)
             {

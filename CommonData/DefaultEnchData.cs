@@ -5,7 +5,7 @@ namespace RQEnchant.CommonData
 {
     public static class DefaultEnchData
     {
-        public static readonly StonePrices DefaultStonePrices = new StonePrices(5000, 150000, 470000, 1100000, 270000);
+        public static readonly StonePrices DefaultStonePrices = new StonePrices(5000, 150000, 670000, 1100000, 270000);
 
         public static readonly List<int> DefaultEcnhLvl = new List<int>()
         {
@@ -95,7 +95,6 @@ namespace RQEnchant.CommonData
             new EnchIterationStateBase(34808, 21000, GameNames.WhiteStName, true), //9
             new EnchIterationStateBase(37486, 22000, GameNames.RedStName, true)    //10
         };
-
         public static readonly List<EnchIterationStateBase> EnchAWeapon2HValue = new List<EnchIterationStateBase>
         {
             new EnchIterationStateBase(17006, 13386, GameNames.AshkStName, false), //1
@@ -135,6 +134,5 @@ namespace RQEnchant.CommonData
             new EnchIterationStateBase(34808, 21000, GameNames.WhiteStName, true), //9
             new EnchIterationStateBase(37486, 22000, GameNames.RedStName, true)    //10
         };
-
     }
 }

@@ -22,7 +22,7 @@ namespace RQEnchant
 
         private readonly EnchPropertyData _selectEnchProperyData = new EnchPropertyData(
             DefaultEnchData.EnchAArmorValue,
-            GameStaticParam.EnchArmorAChances);
+            GameStaticParam.AArmorChances);
 
         private readonly string _defautPropertyFileName;
 
@@ -44,10 +44,10 @@ namespace RQEnchant
             }
             catch (Exception e)
             {
+                SetDefaulEnchProperties();
                 MessageBox.Show(
                     $"Выгрузить шаблон по-умолчанию не удалось! Будут использованы встроенные шаблоны. \n\n {e}",
                     "Ошибка!");
-                SetDefaulEnchProperties();
             }
         }
 
@@ -63,20 +63,18 @@ namespace RQEnchant
                 userData = JsonPacker.FromJson<SaveLoadData>(streamRequest);
             }
 
-            SetEquipEnchProperty(userData, GameNames.GradeA + GameNames.Armor, DefaultEnchData.EnchAArmorValue, GameStaticParam.EnchArmorAChances);
-            SetEquipEnchProperty(userData, GameNames.GradeB + GameNames.Armor, DefaultEnchData.EnchBArmorValue, GameStaticParam.EnchArmorBChances);
-            SetEquipEnchProperty(userData, GameNames.GradeC + GameNames.Armor, DefaultEnchData.EnchCArmorValue, GameStaticParam.EnchArmorCChances);
-            SetEquipEnchProperty(userData, GameNames.GradeA + GameNames.OneHnd, DefaultEnchData.EnchAWeapon1HValue, GameStaticParam.Ench1HWeaponAChances);
-            SetEquipEnchProperty(userData, GameNames.GradeB + GameNames.OneHnd, DefaultEnchData.EnchBWeapon1HValue, GameStaticParam.Ench1HWeaponBChances);
-            SetEquipEnchProperty(userData, GameNames.GradeC + GameNames.OneHnd, DefaultEnchData.EnchCWeapon1HValue, GameStaticParam.Ench1HWeaponCChances);
-            SetEquipEnchProperty(userData, GameNames.GradeA + GameNames.TwoHnd, DefaultEnchData.EnchAWeapon2HValue, GameStaticParam.Ench2HWeaponAChances);
-            SetEquipEnchProperty(userData, GameNames.GradeB + GameNames.TwoHnd, DefaultEnchData.EnchBWeapon2HValue, GameStaticParam.Ench2HWeaponBChances);
-            SetEquipEnchProperty(userData, GameNames.GradeC + GameNames.TwoHnd, DefaultEnchData.EnchCWeapon2HValue, GameStaticParam.Ench2HWeaponCChances);
+            SetEquipEnchProperty(userData, GameNames.GradeA + GameNames.Armor, DefaultEnchData.EnchAArmorValue, GameStaticParam.AArmorChances);
+            SetEquipEnchProperty(userData, GameNames.GradeB + GameNames.Armor, DefaultEnchData.EnchBArmorValue, GameStaticParam.BArmorChances);
+            SetEquipEnchProperty(userData, GameNames.GradeC + GameNames.Armor, DefaultEnchData.EnchCArmorValue, GameStaticParam.CArmorChances);
+            SetEquipEnchProperty(userData, GameNames.GradeA + GameNames.OneHnd, DefaultEnchData.EnchAWeapon1HValue, GameStaticParam.AWeapon1HChances);
+            SetEquipEnchProperty(userData, GameNames.GradeB + GameNames.OneHnd, DefaultEnchData.EnchBWeapon1HValue, GameStaticParam.BWeapon1HChances);
+            SetEquipEnchProperty(userData, GameNames.GradeC + GameNames.OneHnd, DefaultEnchData.EnchCWeapon1HValue, GameStaticParam.CWeapon1HChances);
+            SetEquipEnchProperty(userData, GameNames.GradeA + GameNames.TwoHnd, DefaultEnchData.EnchAWeapon2HValue, GameStaticParam.AWeapon2HChances);
+            SetEquipEnchProperty(userData, GameNames.GradeB + GameNames.TwoHnd, DefaultEnchData.EnchBWeapon2HValue, GameStaticParam.BWeapon2HChances);
+            SetEquipEnchProperty(userData, GameNames.GradeC + GameNames.TwoHnd, DefaultEnchData.EnchCWeapon2HValue, GameStaticParam.CWeapon2HChances);
 
             _stonePrices = userData.StonePrices;
             ResourcesCost.DataContext = _stonePrices;
-
-            //_stonePrices.Copy(userData.StonePrices); //= userData.StonePrices;
 
             _currentEcnhLvls.StartLvlText = DefaultEnchData.DefaultEcnhLvl.Contains(userData.StartEnchLvl) ? userData.StartEnchLvl : 0;
             _currentEcnhLvls.EndLvlText = DefaultEnchData.DefaultEcnhLvl.Contains(userData.EndEnchLvl) ? userData.EndEnchLvl : 1;
@@ -88,15 +86,15 @@ namespace RQEnchant
 
         private void SetDefaulEnchProperties()
         {
-            SetEquipEnchProperty(GameNames.GradeA + GameNames.Armor, DefaultEnchData.EnchAArmorValue, GameStaticParam.EnchArmorAChances);
-            SetEquipEnchProperty(GameNames.GradeB + GameNames.Armor, DefaultEnchData.EnchBArmorValue, GameStaticParam.EnchArmorBChances);
-            SetEquipEnchProperty(GameNames.GradeC + GameNames.Armor, DefaultEnchData.EnchCArmorValue, GameStaticParam.EnchArmorCChances);
-            SetEquipEnchProperty(GameNames.GradeA + GameNames.OneHnd, DefaultEnchData.EnchAWeapon1HValue, GameStaticParam.Ench1HWeaponAChances);
-            SetEquipEnchProperty(GameNames.GradeB + GameNames.OneHnd, DefaultEnchData.EnchBWeapon1HValue, GameStaticParam.Ench1HWeaponBChances);
-            SetEquipEnchProperty(GameNames.GradeC + GameNames.OneHnd, DefaultEnchData.EnchCWeapon1HValue, GameStaticParam.Ench1HWeaponCChances);
-            SetEquipEnchProperty(GameNames.GradeA + GameNames.TwoHnd, DefaultEnchData.EnchAWeapon2HValue, GameStaticParam.Ench2HWeaponAChances);
-            SetEquipEnchProperty(GameNames.GradeB + GameNames.TwoHnd, DefaultEnchData.EnchBWeapon2HValue, GameStaticParam.Ench2HWeaponBChances);
-            SetEquipEnchProperty(GameNames.GradeC + GameNames.TwoHnd, DefaultEnchData.EnchCWeapon2HValue, GameStaticParam.Ench2HWeaponCChances);
+            SetEquipEnchProperty(GameNames.GradeA + GameNames.Armor, DefaultEnchData.EnchAArmorValue, GameStaticParam.AArmorChances);
+            SetEquipEnchProperty(GameNames.GradeB + GameNames.Armor, DefaultEnchData.EnchBArmorValue, GameStaticParam.BArmorChances);
+            SetEquipEnchProperty(GameNames.GradeC + GameNames.Armor, DefaultEnchData.EnchCArmorValue, GameStaticParam.CArmorChances);
+            SetEquipEnchProperty(GameNames.GradeA + GameNames.OneHnd, DefaultEnchData.EnchAWeapon1HValue, GameStaticParam.AWeapon1HChances);
+            SetEquipEnchProperty(GameNames.GradeB + GameNames.OneHnd, DefaultEnchData.EnchBWeapon1HValue, GameStaticParam.BWeapon1HChances);
+            SetEquipEnchProperty(GameNames.GradeC + GameNames.OneHnd, DefaultEnchData.EnchCWeapon1HValue, GameStaticParam.CWeapon1HChances);
+            SetEquipEnchProperty(GameNames.GradeA + GameNames.TwoHnd, DefaultEnchData.EnchAWeapon2HValue, GameStaticParam.AWeapon2HChances);
+            SetEquipEnchProperty(GameNames.GradeB + GameNames.TwoHnd, DefaultEnchData.EnchBWeapon2HValue, GameStaticParam.BWeapon2HChances);
+            SetEquipEnchProperty(GameNames.GradeC + GameNames.TwoHnd, DefaultEnchData.EnchCWeapon2HValue, GameStaticParam.CWeapon2HChances);
         }
 
         private void SetEquipEnchProperty(SaveLoadData userData, string equipType,
@@ -215,16 +213,12 @@ namespace RQEnchant
 
         private void ItemGradeChanged(object sender, SelectionChangedEventArgs e)
         {
-            //SaveSelectedEnchProperty();
-
             var grade = (ComboBox) sender;
             SetNewEcnhPropetyData((string)grade.SelectedItem, _equipPropeties.ItemType);
         }
 
         private void ItemTypeChanged(object sender, SelectionChangedEventArgs e)
         {
-            //SaveSelectedEnchProperty();
-
             var type = (ComboBox)sender;
             SetNewEcnhPropetyData(_equipPropeties.Grade, (string)type.SelectedItem);
         }

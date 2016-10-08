@@ -17,8 +17,10 @@ namespace RQEnchant.PropertyData
                 {
                     _ecnhAshkPiece = value;
                 }
-
-                _ecnhPremPiece = value;
+                else
+                {
+                    _ecnhPremPiece = value;
+                }
 
                 NotifyPropertyChanged("EcnhPiece");
             }

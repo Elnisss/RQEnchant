@@ -19,44 +19,44 @@ namespace RQEnchant.CommonData
             GameNames.AshkStName, GameNames.BlackStName, GameNames.WhiteStName, GameNames.RedStName
         };
 
-        public static readonly List<double> EnchArmorAChances = new List<double>()
+        public static readonly List<double> AArmorChances = new List<double>()
         {
             100, 90, 80, 65, 50, 20, 10, 5, 2.5, 0.5
         };
 
-        public static readonly List<double> EnchArmorBChances = new List<double>()
+        public static readonly List<double> BArmorChances = new List<double>()
         {
             100, 90, 80, 70, 65, 50, 30, 20, 10, 5
         };
 
-        public static readonly List<double> EnchArmorCChances = new List<double>()
+        public static readonly List<double> CArmorChances = new List<double>()
         {
             100, 90, 85, 75, 65, 50, 40, 30, 20, 20
         };
 
-        public static readonly List<double> Ench1HWeaponAChances = new List<double>()
+        public static readonly List<double> AWeapon1HChances = new List<double>()
         {
             100, 80, 67, 50, 25, 7, 4, 2, 1, 0.4
         };
-        public static readonly List<double> Ench1HWeaponBChances = new List<double>()
+        public static readonly List<double> BWeapon1HChances = new List<double>()
         {
             100, 90, 80, 65, 50, 20, 10, 5, 3, 2
         };
-        public static readonly List<double> Ench1HWeaponCChances = new List<double>()
+        public static readonly List<double> CWeapon1HChances = new List<double>()
         {
             100, 90, 75, 60, 50, 40, 30, 20, 14, 8
         };
 
-        public static readonly List<double> Ench2HWeaponAChances = new List<double>()
+        public static readonly List<double> AWeapon2HChances = new List<double>()
         {
-            100, 67, 50, 25, 12, 4, 2, 1, 0.5, 0.2
+            100, 67, 50, 25, 12.5, 4, 2, 1, 0.5, 0.2
         };
-        public static readonly List<double> Ench2HWeaponBChances = new List<double>()
+        public static readonly List<double> BWeapon2HChances = new List<double>()
         {
             100, 67, 50, 30, 20, 16, 8, 4, 2, 1
         };
 
-        public static readonly List<double> Ench2HWeaponCChances = new List<double>()
+        public static readonly List<double> CWeapon2HChances = new List<double>()
         {
             100, 90, 70, 50, 30, 20, 15, 10, 7, 4
         };
