@@ -71,6 +71,10 @@
     </ApplicationDefinition>
     <Compile Include="CommonData\GameNames.cs" />
     <Compile Include="Core\EnchElementData.cs" />
+    <Compile Include="Core\IRoadCalculator.cs" />
+    <Compile Include="Core\ManualRoadCalculator.cs" />
+    <Compile Include="Core\OptimalRoadCalculator.cs" />
+    <Compile Include="Core\RoadCalculator.cs" />
     <Compile Include="PropertyData\EnchIterationStateBase.cs" />
     <Compile Include="PropertyData\CurrentEcnhLvls.cs" />
     <Compile Include="CommonData\DefaultEnchData.cs" />

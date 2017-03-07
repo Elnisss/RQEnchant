@@ -1,4 +1,4 @@
-﻿namespace RQEnchant
+﻿namespace RQEnchant.PropertyData
 {
     public class EnchIterationStateBase
     {

@@ -62,17 +62,17 @@
             <ComboBox Text="{Binding Plus9.StoneType}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" Height="26" Grid.Row="10" Margin="4,5,0,0" Grid.Column="1"/>
             <ComboBox Text="{Binding Plus10.StoneType}" VerticalAlignment="Top" Height="26" Grid.Row="11" Margin="4,5,0,0" Grid.Column="1"/>
 
-            <TextBox Text="{Binding Plus1.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Margin="4,5,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3"/>
-            <TextBox Text="{Binding Plus2.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Margin="4,5,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3"/>
-            <TextBox Text="{Binding Plus3.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Margin="4,5,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3"/>
-            <TextBox Text="{Binding Plus4.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Margin="4,5,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3"/>
+            <TextBox Text="{Binding Plus1.EcnhTryPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Margin="4,5,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3"/>
+            <TextBox Text="{Binding Plus2.EcnhTryPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Margin="4,5,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3"/>
+            <TextBox Text="{Binding Plus3.EcnhTryPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Margin="4,5,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3"/>
+            <TextBox Text="{Binding Plus4.EcnhTryPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Margin="4,5,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3"/>
 
-            <TextBox Text="{Binding Plus5.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3" Margin="4,5,0,0"/>
-            <TextBox Text="{Binding Plus6.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="7" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3" Margin="4,5,0,0"/>
-            <TextBox Text="{Binding Plus7.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="8" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3" Margin="4,5,0,0"/>
-            <TextBox Text="{Binding Plus8.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="9" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3" Margin="4,5,0,0"/>
-            <TextBox Text="{Binding Plus9.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3" Margin="4,5,0,0"/>
-            <TextBox Text="{Binding Plus10.EcnhPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="11" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3" Margin="4,5,0,0"/>
+            <TextBox Text="{Binding Plus5.EcnhTryPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3" Margin="4,5,0,0"/>
+            <TextBox Text="{Binding Plus6.EcnhTryPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="7" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3" Margin="4,5,0,0"/>
+            <TextBox Text="{Binding Plus7.EcnhTryPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="8" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3" Margin="4,5,0,0"/>
+            <TextBox Text="{Binding Plus8.EcnhTryPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="9" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3" Margin="4,5,0,0"/>
+            <TextBox Text="{Binding Plus9.EcnhTryPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3" Margin="4,5,0,0"/>
+            <TextBox Text="{Binding Plus10.EcnhTryPiece}" PreviewTextInput="OnlyIntValueChecker" HorizontalAlignment="Left" Height="26" Grid.Row="11" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Grid.Column="3" Margin="4,5,0,0"/>
 
             <CheckBox IsChecked="{Binding Plus1.RuneIsUsed}" Grid.Column="4" HorizontalAlignment="Left" Margin="9,5,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.35,0.685" Width="22" Height="25"/>
             <CheckBox IsChecked="{Binding Plus2.RuneIsUsed}" Grid.Column="4" HorizontalAlignment="Left" Margin="9,5,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.35,0.685" Width="22" Height="25"/>
@@ -91,15 +91,15 @@
             <Label Content="{Binding Plus3.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="4" VerticalAlignment="Top" Height="24" Width="46"/>
             <Label Content="{Binding Plus4.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="5" VerticalAlignment="Top" Height="24" Width="46"/>
             <Label Content="{Binding Plus5.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="6" VerticalAlignment="Top" Height="24" Width="46"/>
-            <Label Content="{Binding Plus6.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="7" VerticalAlignment="Top" Height="24" Width="46" RenderTransformOrigin="0.5,2.958"/>
+            <Label Content="{Binding Plus6.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="7" VerticalAlignment="Top" Height="24" Width="46"/>
             <Label Content="{Binding Plus7.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="8" VerticalAlignment="Top" Height="24" Width="46"/>
             <Label Content="{Binding Plus8.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="9" VerticalAlignment="Top" Height="24" Width="46"/>
             <Label Content="{Binding Plus9.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="10" VerticalAlignment="Top" Height="24" Width="46"/>
             <Label Content="{Binding Plus10.Chance}" Grid.Column="2" HorizontalAlignment="Left" Margin="4,5,0,0" Grid.Row="11" VerticalAlignment="Top" Height="24" Width="46"/>
         </Grid>
-        <Button Content="Рассчитать" Margin="309,409,0,0" VerticalAlignment="Top" Click="RunCalculation_Click"
-                Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" OpacityMask="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderBrush="#FF614D4D" HorizontalAlignment="Left" Width="328" Height="118"/>
-        <Button Content="Сохранить шаблоны" Focusable="false" Margin="309,548,0,0" VerticalAlignment="Top" Click="SaveEnchProperties"
+        <Button Content="Рассчитать c указанными параметрами" Margin="309,409,0,0" VerticalAlignment="Top" Click="RunManualDataCalculation_Click"
+                Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" OpacityMask="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderBrush="#FF614D4D" HorizontalAlignment="Left" Width="328" Height="52"/>
+        <Button Content="Сохранить шаблоны" Focusable="false" Margin="309,552,0,0" VerticalAlignment="Top" Click="SaveEnchProperties"
             Background="#FF1A831F" Foreground="White" HorizontalAlignment="Left" Width="328"/>
         <Button Content="Загрузить" Focusable="false" Margin="309,587,0,0" VerticalAlignment="Top" Click="LoadEnchProperties"
             Background="#FF1A831F" Foreground="White" HorizontalAlignment="Left" Width="328"/>
@@ -168,9 +168,6 @@
             </Grid>
         </Grid>
         <Grid x:Name="CalculationResultData" DataContext="{Binding Mode=OneWay}" HorizontalAlignment="Left" Height="389" Margin="309,10,0,0" VerticalAlignment="Top" Width="328">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto" MinHeight="290"/>
@@ -219,7 +216,7 @@
                 <Label Content="Кол-во" Margin="14,0,0,1" Grid.Row="2" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="55" Grid.Column="1" RenderTransformOrigin="0.447,0.513"/>
                 <Label Content="Сумма" Margin="55,1,0,0" Grid.Row="2" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="46" Grid.Column="2"/>
                 <Label Content="Затраты на попытки:" HorizontalAlignment="Left" Margin="25,9,0,0" Grid.Row="8" VerticalAlignment="Top" Width="123" Height="26" RenderTransformOrigin="0.861,0.462" Grid.ColumnSpan="2"/>
-                <Label Content="Итого, с ценой попытки:" HorizontalAlignment="Left" Margin="3,9,0,0" Grid.Row="9" VerticalAlignment="Top" Width="145" Height="26" RenderTransformOrigin="0.861,0.462" Grid.ColumnSpan="2"/>
+                <Label Content="Итого, с ценой попыток:" HorizontalAlignment="Left" Margin="3,9,0,0" Grid.Row="9" VerticalAlignment="Top" Width="145" Height="26" RenderTransformOrigin="0.861,0.462" Grid.ColumnSpan="2"/>
                 <TextBox Text="{Binding TotalEcnhItepationPrice, Converter={StaticResource StringConverter}, Mode=OneWay}" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Grid.Row="8" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.Column="2" Margin="6,9,0,0"/>
                 <TextBox Text="{Binding TotalEnchPrice, Converter={StaticResource StringConverter}, Mode=OneWay}" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Grid.Row="9" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.Column="2" Margin="6,9,0,0"/>
             </Grid>
@@ -229,7 +226,8 @@
             <Label Content="Шанс заточисть все с 1й попытки:" HorizontalAlignment="Left" Margin="10,4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="197" Height="26" RenderTransformOrigin="0.861,0.462"/>
             <Label Content="%" HorizontalAlignment="Left" Margin="303,4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="24" Height="26" RenderTransformOrigin="0.861,0.462"/>
         </Grid>
-        <Label Content="Ис" HorizontalAlignment="Left" Margin="613,617,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ис. Версия от 2017.03.07" Margin="494,617,0,0" VerticalAlignment="Top"/>
+        <Button Content="Вычислить наиболее оптимальный путь" Margin="309,478,0,0" VerticalAlignment="Top" Click="RunOptimalRoadCalculation_Click" OpacityMask="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}" BorderBrush="#FF614D4D" HorizontalAlignment="Left" Width="328" Height="53" Background="{DynamicResource {x:Static SystemColors.InactiveCaptionTextBrushKey}}"/>
     </Grid>
 
 </controls:MetroWindow>

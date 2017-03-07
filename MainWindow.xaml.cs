@@ -19,7 +19,6 @@ namespace RQEnchant
     /// </summary>
     public partial class MainWindow
     {
-
         private readonly EnchPropertyData _selectEnchProperyData = new EnchPropertyData(
             DefaultEnchData.EnchAArmorValue,
             GameStaticParam.AArmorChances);
@@ -77,7 +76,7 @@ namespace RQEnchant
             ResourcesCost.DataContext = _stonePrices;
 
             _currentEcnhLvls.StartLvlText = DefaultEnchData.DefaultEcnhLvl.Contains(userData.StartEnchLvl) ? userData.StartEnchLvl : 0;
-            _currentEcnhLvls.EndLvlText = DefaultEnchData.DefaultEcnhLvl.Contains(userData.EndEnchLvl) ? userData.EndEnchLvl : 1;
+            _currentEcnhLvls.EndLvlText = DefaultEnchData.DefaultEcnhLvl.Contains(userData.EndEnchLvl) ? userData.EndEnchLvl : 10;
             _equipPropeties.Grade = GameStaticParam.Grades.Contains(userData.Grade) ? userData.Grade : GameNames.GradeA ;
             _equipPropeties.ItemType = GameStaticParam.ItemTypes.Contains(userData.ItemType) ? userData.ItemType : GameNames.Armor;
 
@@ -112,8 +111,7 @@ namespace RQEnchant
                 : defaultData;
         }
 
-        private void SetEquipEnchProperty(string equipType, List<EnchIterationStateBase> enchStates,
-            List<double> chances)
+        private void SetEquipEnchProperty(string equipType, List<EnchIterationStateBase> enchStates, List<double> chances)
         {
             _baseEnchPropeties[equipType]
                 = new Tuple<List<EnchIterationStateBase>, List<double>>(enchStates, chances);
@@ -190,10 +188,26 @@ namespace RQEnchant
             }
         }
 
-        private void RunCalculation_Click(object sender, RoutedEventArgs e)
+        private void RunManualDataCalculation_Click(object sender, RoutedEventArgs e)
         {
-            var result = new EnchCalcResult(_selectEnchProperyData, _stonePrices);
-            result.Calculate(_currentEcnhLvls.StartLvlText, _currentEcnhLvls.EndLvlText);
+            var calculator = new ManualRoadCalculator(_selectEnchProperyData, _stonePrices);
+            RunCalculator(calculator);
+        }
+
+        private void RunOptimalRoadCalculation_Click(object sender, RoutedEventArgs e)
+        {
+            var calculator = new OptimalRoadCalculator(
+                _selectEnchProperyData, _stonePrices, _baseEnchPropeties[_equipPropeties.Grade + _equipPropeties.ItemType].Item2);
+
+            RunCalculator(calculator);
+
+            EnchPropetyData.DataContext = calculator.EnchProperyData;
+            
+        }
+
+        private void RunCalculator(IRoadCalculator calculator)
+        {
+            var result = calculator.Calculate(_currentEcnhLvls.StartLvlText, _currentEcnhLvls.EndLvlText);
             CalculationResultData.DataContext = result;
         }
 
@@ -228,7 +242,7 @@ namespace RQEnchant
             _baseEnchPropeties[_equipPropeties.Grade + _equipPropeties.ItemType] =
                 new Tuple<List<EnchIterationStateBase>, List<double>>(
                     _selectEnchProperyData.EnchLvls.Select(
-                            e => new EnchIterationStateBase(e._ecnhPremPiece, e._ecnhAshkPiece, e.StoneType, e.RuneIsUsed))
+                            e => new EnchIterationStateBase(e.EcnhPremTryPiece, e.EcnhAshkTryPiece, e.StoneType, e.RuneIsUsed))
                         .ToList(),
                     _baseEnchPropeties[_equipPropeties.Grade + _equipPropeties.ItemType].Item2);
 

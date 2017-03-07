@@ -8,18 +8,18 @@ namespace RQEnchant.PropertyData
     {
         public readonly string Name;
 
-        public int EcnhPiece
+        public int EcnhTryPiece
         {
-            get { return StoneType == GameNames.AshkStName ? _ecnhAshkPiece : _ecnhPremPiece; }
+            get { return StoneType == GameNames.AshkStName ? EcnhAshkTryPiece : EcnhPremTryPiece; }
             set
             {
                 if (StoneType == GameNames.AshkStName)
                 {
-                    _ecnhAshkPiece = value;
+                    EcnhAshkTryPiece = value;
                 }
                 else
                 {
-                    _ecnhPremPiece = value;
+                    EcnhPremTryPiece = value;
                 }
 
                 NotifyPropertyChanged("EcnhPiece");
@@ -56,19 +56,20 @@ namespace RQEnchant.PropertyData
             }
         }
 
-        private readonly double _chance;
+        public int EcnhPremTryPiece { get; private set; }
+        public int EcnhAshkTryPiece { get; private set; }
 
-        public int _ecnhPremPiece;
-        public int _ecnhAshkPiece;
+        private readonly double _chance;
         private string _stoneType;
         private bool _runeIsUsed;
 
-        public EnchIterationState(string name, double chance, int ecnhPremPiece, int enchAshkPeice, string stoneType, bool runeIsUsed)
+        public EnchIterationState(string name, double chance, int ecnhPremTryPiece, int enchAshkTryPeice, string stoneType, bool runeIsUsed)
         {
             Name = name;
+            EcnhPremTryPiece = ecnhPremTryPiece;
+            EcnhAshkTryPiece = enchAshkTryPeice;
+
             _chance = chance;
-            _ecnhPremPiece = ecnhPremPiece;
-            _ecnhAshkPiece = enchAshkPeice;
             _stoneType = stoneType;
             _runeIsUsed = runeIsUsed;
         }
