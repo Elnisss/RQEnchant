@@ -36,7 +36,7 @@ namespace RQEnchant.CommonData
 
         public static readonly List<double> AWeapon1HChances = new List<double>()
         {
-            100, 80, 67, 50, 25, 7, 4, 2, 1, 0.4
+            100, 80, 67, 50, 25, 7, 4, 2, 1, 0.2
         };
         public static readonly List<double> BWeapon1HChances = new List<double>()
         {
@@ -49,7 +49,7 @@ namespace RQEnchant.CommonData
 
         public static readonly List<double> AWeapon2HChances = new List<double>()
         {
-            100, 67, 50, 25, 12.5, 4, 2, 1, 0.5, 0.2
+            100, 67, 50, 25, 12.5, 4, 2, 1, 0.5, 0.1
         };
         public static readonly List<double> BWeapon2HChances = new List<double>()
         {
